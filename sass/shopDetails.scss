@@ -1,0 +1,51 @@
+body{
+    background: rgb(248, 247, 247);
+    // background:#fff;
+}
+#title{
+    width:1200px;
+    height:100px;
+    margin:10px auto;
+    padding-bottom:30px;
+    border-bottom:3px solid #b3a078;
+    position:relative;
+    img{
+        float:left;
+        margin-top:29px;
+    }
+    p{
+        float:left;
+        width:250px;
+        height:44px;
+        border-left:1px solid #ddd;
+        font:32px/44px "";
+        color:#b3a078;
+        text-align:center;
+        margin:25px 0 0 20px;
+    }
+    .guanzhu{
+        float:right;
+        .ewm{
+            width:60px;
+            height:60px;
+            background:url(../images/ewm.png) no-repeat center;
+            position:absolute;
+            top:-10px;
+            right:0;
+            b{
+                display:block;
+                width:10px;
+                height:10px;
+                background:rgba(161, 161, 161, 0.1);
+                position:absolute;
+                left:25px;
+                top:-5px;
+            }
+        }
+        a{
+            position:absolute;
+            right:0;
+            bottom:30px;
+        }
+    }
+}

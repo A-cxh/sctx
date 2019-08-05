@@ -12,6 +12,52 @@ html,body{
 }
 #floor{
     position:fixed;
+    left:20px;
+    bottom:100px;
+    z-index:5;
+}
+#floor ul li{
+    width:30px;
+    height:30px;
+    background:#fff;
+    position:relative;
+    margin-bottom:5px;
+    border:1px solid #ddd;
+    font:16px/30px "";
+    color:#666;
+    text-align:center;
+}
+#floor ul li:hover{
+    cursor:pointer;
+}
+#floor ul li:first-child{
+    box-sizing:border-box;
+    padding-top:10px;
+    height:40px;
+    border-radius:15px 15px 0 0;
+}
+#floor ul li:first-child span{
+    margin-top:10px;
+}
+#floor ul li:last-child{
+    margin:0;
+    height:40px;
+    border-radius:0 0 15px 15px;
+}
+#floor ul li span{
+    display:block;
+    height:26px;
+    width:80px;
+    font:14px/26px "";
+    position:absolute;
+    left:35px;
+    top:2px;
+    color:#fff;
+    background:rgba(0, 0, 0, 0.6);
+    display:none;
+}
+#floor ul li:hover span{
+    display:block;
 }
 .margin{
     width:1200px;
