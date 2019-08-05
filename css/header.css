@@ -1,0 +1,161 @@
+/* 公共 */
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+html,body{
+    width:100%;
+}
+.margin{
+    width:1200px;
+    margin:0 auto;
+}
+/* 头部 导航*/
+header{
+    height:30px;
+    background:#fafafa;
+    border-bottom:1px solid #ddd;
+}
+header:hover{
+    cursor:default;
+}
+header .header-l{
+    float:left;
+}
+header .header-l p{
+    display:inline-block;
+}
+header .header-l p span{
+    font:12px/30px "";
+    color:#999;
+    margin:0 4px;
+}
+header .header-l .p1 span:hover{
+    cursor:pointer;
+}
+header .header-l .p1 .log a{
+    color:red;
+}
+header .header-l .p1 .reg a{
+    color:#666;
+}
+header .header-l .p1 .reg:hover a{
+    color:red;
+}
+header .header-l .p2{
+    display:none;
+}
+header .header-l .p2 span{
+    font:14px/30px "";
+    margin:0 10px;
+    color:rgb(255, 81, 0);
+}
+header .header-l .p2 .out{
+    color:rgb(0, 68, 255);
+}
+header .header-l .p2 .out:hover{
+    cursor:pointer;
+}
+header .header-r{
+    position:relative;
+    float:right;
+}
+header .header-r a{
+    float:left;
+    box-sizing:border-box;
+    height:29px;
+    border-left:1px solid #fafafa;
+    border-right:1px solid #fafafa;
+    font:12px/30px "";
+    padding:0 7px;
+    color:#999;
+}
+header .header-r a:hover{
+    color:red;
+}
+header .header-r a.mysc:hover{
+    background:#fff;
+    display:block;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+header .header-r a.mysc:hover+.sc{
+    display:block;
+}
+header .header-r a.myfw:hover{
+    background:#fff;
+    display:block;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+header .header-r a.myfw:hover+.fw{
+    display:block;
+}
+header .header-r a b{
+    color:red;
+    margin:0 4px;
+}
+header .header-r i{
+    display:block;
+    float:right;
+    width:12px;
+    height:12px;
+    background:url(../images/downArrow.png) no-repeat center;
+    background-size:12px 12px;
+    margin-top:10px
+}
+header .header-r span{
+    float:left;
+    color:#ccc;
+    margin:5px 5px 0;
+}
+header .header-r .sc{
+    width:280px;
+    height:100px;
+    border:1px solid #ddd;
+    border-top:0;
+    background:#fff;
+    position:absolute;
+    top:31px;
+    left:193px;
+    z-index:1;
+    display:none;
+}
+header .header-r .sc ul li{
+    float:left;
+}
+header .header-r .sc ul li dl dd a{
+    display:block;
+    width:140px;
+    margin:0;
+    padding:0;
+    border:0;
+    font:12px/30px "";
+    text-indent:1rem;
+}
+
+header .header-r .fw{
+    width:175px;
+    height:75px;
+    border:1px solid #ddd;
+    border-top:0;
+    background:#fff;
+    position:absolute;
+    top:31px;
+    left:205px;
+    z-index:1;
+    display:none;
+}
+header .header-r .fw ul li{
+    float:left;
+}
+header .header-r .fw ul li dl dd a{
+    display:block;
+    width:87px;
+    margin:0;
+    padding:0;
+    border:0;
+    font:12px/30px "";
+    text-indent:1rem;
+}

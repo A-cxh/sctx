@@ -1,0 +1,48 @@
+body{
+    background: rgb(248, 247, 247);
+}
+#title{
+    width:1000px;
+    height:100px;
+    margin:10px auto;
+    margin-bottom:30px;
+}
+#title img{
+    float:left;
+    margin-top:29px;
+}
+#title p{
+    float:left;
+    width:250px;
+    height:44px;
+    border-left:1px solid #ddd;
+    font:28px/44px "";
+    color:#333;
+    text-align:center;
+    margin:25px 0 0 20px;
+}
+#title .guanzhu{
+    float:right;
+}
+#title .guanzhu .ewm{
+    width:60px;
+    height:60px;
+    background:url(../images/ewm.png) no-repeat center;
+    position:absolute;
+    top:31px;
+    right:70px;
+}
+#title .guanzhu .ewm b{
+    display:block;
+    width:10px;
+    height:10px;
+    background: rgb(161, 161, 161, 0.1);
+    position:absolute;
+    left:25px;
+    top:-5px;
+}
+#title .guanzhu a{
+    position:absolute;
+    left:900px;
+    top:70px;
+}

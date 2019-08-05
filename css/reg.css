@@ -1,0 +1,173 @@
+body{
+    background: rgb(248, 247, 247);
+}
+header{
+    width:1000px;
+    height:100px;
+    margin:10px auto;
+}
+header img{
+    float:left;
+    margin-top:29px;
+}
+header p{
+    float:left;
+    width:150px;
+    height:44px;
+    border-left:1px solid #ddd;
+    font:28px/44px "";
+    color:#333;
+    text-align:center;
+    margin:25px 0 0 20px;
+}
+#banner {
+    height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.cont {
+    width: 200px;
+    font: 16px/2 "";
+    text-align: center;
+    border: thin solid #000;
+    background: rgb(241, 226, 205);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 200px auto;
+    display: none;
+    z-index: 1;
+}
+form{
+    width:1000px;
+    height:460px;
+    background:#fff;
+    border:1px solid #aaa;
+    border-radius:5px;
+    margin:0 auto;
+    position:relative;
+}
+#banner form img{
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+table {
+    width: 500px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+thead {
+    font: 800 26px/70px "";
+    color: tomato
+}
+
+tbody td {
+    width:150px;
+    padding: 5px 10px;
+    font: 700 16px/2 "";
+    position:relative;
+}
+
+tbody .width{
+    width:350px;
+    text-align:left;
+}
+
+tbody #name,
+#pass,
+#repass,
+#tel,
+#email {
+    width: 150px;
+    height: 24px;
+}
+
+#sub {
+    width: 180px;
+    height: 30px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+#sub:hover {
+    cursor: pointer;
+}
+
+#sub {
+    background: rgb(0, 140, 255);
+    color: #fff;
+    font: 700 16px/2 "";
+}
+
+.last {
+    height: 40px;
+}
+
+#index {
+    font: 16px/2 "";
+    float: right;
+    color: #333;
+}
+
+.t {
+    color: red;
+}
+
+#check {
+    float: left;
+    width: 150px;
+    height: 18px;
+    border: 1px solid #999;
+    border-radius: 11px;
+}
+
+#check li {
+    width: 44px;
+    height: 12px;
+    font: 700 12px/1 "";
+    margin: 3px;
+    float: left;
+    color: rgb(170, 170, 170);
+    background: rgb(170, 170, 170);
+}
+
+#check li:nth-child(1) {
+    border-radius: 6px 0 0 6px;
+}
+
+/* ul li:nth-child(2) {} */
+
+#check li:nth-child(3) {
+    border-radius: 0 6px 6px 0;
+}
+
+label.error{
+    display:inline-block;
+    height:20px;
+    font:12px/1"";
+    color:red;
+    margin:auto 0;
+}
+label.error i{
+    display:inline-block;
+    width:150px;
+    height:20px;
+    color:#666;
+}
+.bGround{
+    width:150px;
+    height:40px;
+    display:none;
+    background:url(../images/2.png) no-repeat 5px center,#fff ;
+    background-size:20px 20px;
+}
+

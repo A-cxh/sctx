@@ -1,0 +1,171 @@
+/* 公共 */
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+html,body{
+    width:100%;
+}
+.margin{
+    width:1200px;
+    margin:0 auto;
+}
+/* 底部 正品保障等样例*/
+#mod-service{
+    border-bottom:1px solid #ccc;
+}
+#mod-service ul{
+    width:100%;
+    height:106px;
+    display:flex;
+    justify-content:space-around;
+}
+#mod-service ul li{
+    width:300px;
+    height:50px;
+    align-self:center;
+}
+#mod-service ul li i{
+    float:left;
+    display:block;
+    width:52px;
+    height:45px;
+    margin:0 22px 0 50px;
+}
+#mod-service ul li .service1{
+    background:url(../images/mod-service1.png) no-repeat center;
+    background-size:52px 45px;
+}
+#mod-service ul li .service2{
+    background:url(../images/mod-service2.png) no-repeat center;
+    background-size:52px 45px;
+}
+#mod-service ul li .service3{
+    background:url(../images/mod-service3.png) no-repeat center;
+    background-size:52px 45px;
+}
+#mod-service ul li .service4{
+    background:url(../images/mod-service4.png) no-repeat center;
+    background-size:52px 45px;
+}
+#mod-service ul li h5{
+    font:600 18px/24px "";
+    color:#666;
+}
+#mod-service ul li span{
+    font:12px/2 "";
+    color:#666;
+}
+
+/* 底部 服务栏*/
+#mod-help{
+    height:160px;
+    padding:30px 0;
+}
+#mod-help ul{
+    height:190px;
+    border-bottom:1px solid #ccc;
+}
+#mod-help ul li{
+    float:left;
+    width:200px;
+}
+#mod-help ul li dt{
+    font:700 14px/22px "";
+    color:#666;
+    margin-bottom:5px;
+}
+#mod-help ul li dd{
+    font:12px/22px "";
+    color:#555;
+}
+#mod-help ul li i{
+    float:left;
+    display:block;
+    width:22px;
+    height:22px;
+    margin:0 10px 0 30px;
+}
+#mod-help ul li div{
+    float:left;
+    margin-bottom:10px;
+}
+#mod-help ul li .Gftel i{
+    background:url(../images/Gftel.png) no-repeat center;
+    background-size:22px 22px;
+}
+#mod-help ul li h5{
+    font:700 14px/24px "";
+    color:#666;
+}
+#mod-help ul li h2{
+    font:700 20px/24px "";
+    color:#666;
+}
+#mod-help ul li .Astel i{
+    background:url(../images/Astel.png) no-repeat center;
+    background-size:22px 22px;
+}
+#mod-help ul li h4{
+    font:700 16px/24px "";
+    color:#666;
+}
+
+friendLink dl{
+    height:54px;
+    padding:15px 0;
+}
+
+friendLink dt{
+    font:12px/18px "";
+    color:#999;
+    margin-left:3px;
+}
+friendLink dl dd{
+    float:left;
+    margin:0 3px;
+}
+friendLink dl dd a{
+    font:12px/18px "";
+    color:#999;
+}
+friendLink dl dd a:hover{
+    color:red;
+}
+/* 底部 */
+footer{
+    text-align:center;
+}
+footer .footer-top{
+    height:18px;
+    font:12px/18px "";
+}
+footer .footer-top a{
+    color:#555;
+}
+footer .footer-top span{
+    color:#ccc;
+    margin:0 10px;
+}
+footer .footer-center p{
+    font:12px/22px "";
+    color:#999;
+}
+footer .footer-bottom ul{
+    width:450px;
+    height:40px;
+    margin:10px auto 35px;
+    display:flex;
+    justify-content:space-between;
+}
+footer .footer-bottom ul li{
+    width:108px;
+    height:40px;
+    float:left;
+}
+footer .footer-bottom ul li a{
+    display:block;
+    width:108px;
+    height:40px;
+}

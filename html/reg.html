@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收藏天下-注册</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon-ico.jpg" />
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/reg.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <header>
+        <a href = "index.html"><img src="../images/reg&log-logo.png" /></a>
+        <p>欢迎注册</p>
+    </header>
+    <div id="banner">
+        <p class="cont"></p>
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">注册账户</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>用户名：</td>
+                        <td class = "width">
+                            <input type="text" name="user" id="name" required=true>
+                            <label for="name" class="error"><i>用户名为任意字符，长度不超过12位</i></label>
+                            <div class = "bGround"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密 码：</td>
+                        <td class = "width">
+                            <input type="password" name="pass" id="pass" required=true>
+                            <label for="pass" class="error"><i>密码为数字、字母、特殊字符,1-16位</i></label>
+                            <div class = "bGround"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>密码强度：</td>
+                        <td>
+                            <ul id = "check">
+                                <li>差</li>
+                                <li>中</li>
+                                <li>难</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>重复密码：</td>
+                        <td class = "width">
+                            <input type="password" name="repass" id="repass" equalTo = "#pass">
+                            <label for="repass" class="error"><i>请再次输入密码</i></label>
+                            <div class = "bGround"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手 机：</td>
+                        <td class = "width">
+                            <input type="text" name="tel" id="tel" digits=true maxlength="11" minlength="11">
+                            <label for="tel" class="error"><i>填写手机号，以便联系</i></label>
+                            <div class = "bGround"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>邮 箱：</td>
+                        <td class = "width">
+                            <input type="text" name="email" id="email" email=true>
+                            <label for="email" class="error"><i>填写邮箱，以便联系</i></label>
+                            <div class = "bGround"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="sub" value="注册" class = "valid"/>
+                        </td>
+                    </tr>
+                    <tr class="last">
+                        <td colspan="2">
+                            <a href="index.html" id="index">返回首页</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="../images/register-bg.jpg" >
+        </form>
+    </div>
+
+    <div id = "foot"></div>
+</body>
+<script src="../libs/jquery.1.12.4.js"></script>
+<script src="../libs/jquery.validate.js"></script>
+<script src="../libs/jquery.validate.messages_zh.js"></script>
+<script src="../js/reg.js"></script>
+<script type="text/javascript">
+    $("#foot").load("footer.html");
+</script>
+</html>
