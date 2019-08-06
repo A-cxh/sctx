@@ -48,7 +48,7 @@
             if(l > this.sbox.width() - this.span.width()) l = this.sbox.width() - this.span.width();
             if(t > this.sbox.innerHeight() - this.span.innerHeight()) t = this.sbox.innerHeight() - this.span.innerHeight();
 
-            console.log(l, t)
+            // console.log(l, t)
             this.span.css({
                 left:l,
                 top:t
