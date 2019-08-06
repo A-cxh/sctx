@@ -1,5 +1,5 @@
 body {
-  background: #f8f7f7; }
+  background: #f1f4f1; }
 
 #title {
   width: 1200px;
@@ -41,3 +41,156 @@ body {
       position: absolute;
       right: 0;
       bottom: 30px; }
+
+#content {
+  height: 700px;
+  position: relative; }
+  #content .imgBox {
+    float: left;
+    width: 480px;
+    height: 550px;
+    text-align: center; }
+    #content .imgBox .simg {
+      float: left;
+      width: 478px;
+      height: 478px;
+      border: 1px solid #eee;
+      background: #fff;
+      box-sizing: border-box;
+      padding-top: 80px;
+      position: relative; }
+      #content .imgBox .simg span {
+        width: 320px;
+        height: 320px;
+        background: rgba(161, 161, 161, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none; }
+        #content .imgBox .simg span:hover {
+          cursor: move; }
+    #content .imgBox .bbox {
+      width: 480px;
+      height: 480px;
+      border: 1px solid #eee;
+      position: absolute;
+      z-index: 1;
+      left: 600px;
+      top: 0;
+      overflow: hidden;
+      display: none; }
+      #content .imgBox .bbox .bimg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 717px;
+        height: 717px;
+        background: #fff;
+        box-sizing: border-box;
+        padding-top: 120px; }
+        #content .imgBox .bbox .bimg img {
+          width: 480px;
+          height: 480px; }
+    #content .imgBox ul {
+      width: 480px;
+      height: 64px;
+      text-align: center; }
+      #content .imgBox ul li {
+        float: left;
+        width: 64px;
+        height: 64px;
+        background: #fff;
+        margin: 10px 10px 0 0;
+        border: 1px solid #ddd;
+        font: 12px/64px ""; }
+        #content .imgBox ul li:hover {
+          cursor: pointer; }
+        #content .imgBox ul li img {
+          float: left;
+          width: 64px;
+          height: 64px; }
+  #content .details {
+    float: left;
+    width: 500px;
+    height: 480px;
+    margin: 30px 0 0 80px; }
+    #content .details h2 {
+      font: 700 16px/34px "";
+      color: #333; }
+    #content .details .price {
+      width: 500px;
+      height: 62px;
+      background: #eee;
+      font: 24px/62px "";
+      color: #e31935;
+      margin-bottom: 20px; }
+      #content .details .price span {
+        float: left;
+        font: 12px/18px "";
+        color: #999;
+        margin: 22px 20px 0 20px; }
+    #content .details .localtion {
+      height: 30px;
+      width: 500px; }
+      #content .details .localtion .locname {
+        font: 12px/30px "";
+        color: #999;
+        margin: 0 20px; }
+    #content .details .num {
+      margin-top: 20px;
+      width: 500px;
+      height: 40px;
+      color: #666; }
+      #content .details .num span {
+        font: 12px/30px "";
+        color: #999;
+        margin: 0 20px; }
+        #content .details .num span i {
+          font: 14px/30px "";
+          color: #e31935;
+          margin: 0 5px; }
+    #content .details .car {
+      float: left;
+      width: 162px;
+      height: 40px;
+      font: 16px/20px "";
+      border-radius: 5px;
+      color: #fff;
+      background: #e32e39;
+      margin: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #content .details .car i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/shopCar.png) no-repeat center;
+        background-size: 20px 20px;
+        margin: 0 5px 0 0; }
+    #content .details .kefu {
+      float: left;
+      width: 162px;
+      height: 40px;
+      font: 16px/40px "";
+      border-radius: 5px;
+      color: red;
+      background: #ffcad5;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #content .details .kefu i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/kefu.png) no-repeat center;
+        background-size: 20px 20px;
+        margin: 0 5px 0 0; }
+  #content .bottom {
+    width: 980px;
+    height: 110px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }

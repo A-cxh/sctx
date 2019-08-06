@@ -1,4 +1,4 @@
-define(function(){
+;define(function(){
     class Floor{
         constructor(options){
             this.btn = options.list;

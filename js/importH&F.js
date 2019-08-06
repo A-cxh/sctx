@@ -1,4 +1,4 @@
 // ;$("header").load("header.html");
-;$("#foot").load("footer.html");
-$("#foot-top").load("footer-top.html");
+;$("#foot").load("../html/footer.html");
+$("#foot-top").load("../html/footer-top.html");
 

@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>收藏天下-商品详情</title>
+    <title>收藏天下-购物车</title>
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon-ico.jpg" />
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/shopDetails.css">
-    <link rel="stylesheet" href="../css/select2.css">
+    <link rel="stylesheet" href="../css/shopCar.css">
 </head>
 
 <body>
@@ -30,7 +29,7 @@
             <div class="header-r">
                 <a href="index.html">收藏天下首页</a>
                 <span>|</span>
-                <a href="shopCar.html" target="_blank">购物车<b>0</b>件</a>
+                <a href="shopCar.html">购物车<b>0</b>件</a>
                 <span>|</span>
                 <a href="#" class="mysc">我的收藏天下<i></i></a>
                 <div class="sc">
@@ -76,67 +75,69 @@
     <div id="title">
         <div class="margin">
             <a href="index.html"><img src="../images/reg&log-logo.png" /></a>
-            <p>商品详情</p>
+            <p>我的购物车</p>
             <div class="guanzhu">
                 <div class="ewm"><b></b></div>
                 <a href="#"><img src="../images/499-free.png" /></a>
             </div>
         </div>
-    </div>
-
-    <div id = "content">
+    </div
+    >
+    <div id = "shops">
         <div class = "margin">
-            <div class = "imgBox">
-                <div class = "simg">
-                    <div class = "table">
-                        <img src="../images/ys-b-img7.jpg" />
-                    </div>
-                    <span></span>
+            <!-- <p>
+                <i></i>
+                <span>
+                    购物车还是空空的呢，快去看看心怡的商品吧~
+                    <a href="shopList.html">去购物></a>
+                </span>
+            </p> -->
+            <div class = "car">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>商品信息</li>
+                            <li>单价（元）</li>
+                            <li>数量</li>
+                            <li>金额（元）</li>
+                            <li>操作</li>
+                        </ul>
+                    </dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="" id="">
+                                <img src="../images/buy-img9.jpg" >
+                                <span>发大水发大水发都是实的</span>
+                            </li>
+                            <li>65.00</li>
+                            <li><input type="number" min = 1 name="" id="num"></li>
+                            <li>65</li>
+                            <li>删除</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <div class = "jiesuan">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id="">
+                            <span>全选</span>
+                        </li>
+                        <li>
+                            <span>已选商品<i>n</i>件</span>
+                            <span>合计（不含运费）：<b>5222</b></span>
+                            <a href="##">结算</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class = "bbox">
-                    <div class = "bimg">
-                        <img src="../images/ys-b-img7.jpg" />
-                    </div>
-                </div>
-                <ul>
-                    <li><img src="../images/before.png" /></li>
-                    <li><img src="../images/ys-b-img7.jpg"></li>
-                    <li><img src="../images/after.png" /></li>
-                </ul>
-            </div>
-            <div class = "details">
-                <h2>啊的萨芬地方肯定是范德萨范德萨发大水</h2>
-                <p class = "price"><span>售价</span>800.00</p>
-                <div class = "localtion">
-                    <span class="locname">地区</span>
-                    <select id="loc_province" style="width:120px;">
-                    </select>
-                    <select id="loc_city" style="width:120px; margin-left: 10px">
-                    </select>
-                    <select id="loc_town" style="width:120px;margin-left: 10px">
-                    </select>
-                </div>
-                <p class = "num"><span>库存<i>n</i>件</span>（本商品由收藏天下北京货仓为您发货）</p>
-                <a href="##" class = "car"><i></i>加入购物车</a>
-                <a href="##" class = "kefu"><i></i>咨询客服</a>
-            </div>
-            <div class = "bottom">
-                <img src="../images/shopDetails-img.jpg"/>
             </div>
         </div>
-    </div>    
-
-    <div id="foot-top"></div>
-
+    </div>
+    
     <div id="foot"></div>
 
 </body>
 <script src="../libs/jquery.1.12.4.js"></script>
-<script src="../libs/area.js"></script>
-<script src="../libs/location.js"></script>
-<script src="../libs/select2.js"></script>
-<script src="../libs/require.js"></script>
-<script src="../js/main.js"></script>
 <script src="../js/importH&F.js"></script>
 <script src="../js/login&out.js"></script>
 </html>

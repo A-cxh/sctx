@@ -131,14 +131,22 @@ body {
     float: left;
     width: 990px;
     margin-top: 40px; }
-    #main .shops h3 {
+    #main .shops dl {
       width: 975px;
       height: 40px;
-      font: 20px/40px "";
-      color: #333;
+      font: 14px/40px "";
+      color: #666;
       border: 1px solid #ddd;
-      text-indent: 2rem;
       margin: 0 0 10px 15px; }
+      #main .shops dl dd {
+        float: left;
+        padding: 0 10px; }
+        #main .shops dl dd:hover {
+          cursor: pointer;
+          color: #e31939; }
+      #main .shops dl .active {
+        background: #fff;
+        border-right: 1px solid #ddd; }
     #main .shops ul {
       float: left; }
       #main .shops ul li {

@@ -158,14 +158,25 @@ body{
         float:left;
         width:990px;
         margin-top:40px;
-        h3{
+        dl{
             width:975px;
             height:40px;
-            font:20px/40px "";
-            color:#333;
+            font:14px/40px "";
+            color:#666;
             border:1px solid #ddd;
-            text-indent:2rem;
             margin:0 0 10px 15px;
+            dd{
+                float:left;
+                padding:0 10px;
+                &:hover{
+                    cursor:pointer;
+                    color:#e31939;
+                }
+            }
+            .active{
+                background:#fff;
+                border-right:1px solid #ddd;
+            }
         }
         ul{
             float:left;

@@ -1,0 +1,205 @@
+body{
+    background:#fff;
+}
+#foot{
+    background:#34495e;
+    .footer-top{
+        padding:20px 0 0 0;
+        a{
+            color:#ddd;
+        }
+    }
+    .footer-center{
+        p{
+            color:#ddd;
+        }
+    }
+    .footer-bottom{
+        ul{
+            margin:10px auto 0;
+            padding:0 0 20px 0;
+        }
+    }
+}
+#title{
+    width:1200px;
+    height:100px;
+    margin:10px auto;
+    padding-bottom:30px;
+    border-bottom:3px solid #b3a078;
+    position:relative;
+    img{
+        float:left;
+        margin-top:29px;
+    }
+    p{
+        float:left;
+        width:250px;
+        height:44px;
+        border-left:1px solid #ddd;
+        font:600 32px/44px "";
+        color:rgb(238, 67, 67);
+        text-align:center;
+        margin:25px 0 0 20px;
+    }
+    .guanzhu{
+        float:right;
+        .ewm{
+            width:60px;
+            height:60px;
+            background:url(../images/ewm.png) no-repeat center;
+            position:absolute;
+            top:-10px;
+            right:0;
+            b{
+                display:block;
+                width:10px;
+                height:10px;
+                background:rgba(161, 161, 161, 0.1);
+                position:absolute;
+                left:25px;
+                top:-5px;
+            }
+        }
+        a{
+            position:absolute;
+            right:0;
+            bottom:30px;
+        }
+    }
+}
+
+#shops{
+    min-height:309px;
+    display:flex;
+    align-items:center;
+    p{
+        height:100px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        i{
+            display:inline-block;
+            width:100px;
+            height:100px;
+            background:url(../images/shops-shopCar.png) no-repeat center;
+            background-size:100px 100px;
+            margin-right:20px;
+        }
+        span{
+            width:300px;
+            font:14px/30px "";
+        }
+        a{
+            color:#1366b9;
+            &:hover{
+                color:red;
+            }
+        }
+    }
+    .car{
+        dt{
+            ul{
+                height:50px;
+                box-sizing:border-box;
+                border-top:2px solid #ddd;
+                border-bottom:2px solid #ddd;
+                margin-bottom:10px;
+                padding-left:150px;
+                li{
+                    float:left;
+                    width:150px;
+                    text-align:center;
+                    font:12px/50px "";
+                    &:first-child{
+                        width:450px;
+                        text-align:left;
+                    }
+                }
+            }
+        }
+        dd{
+            ul{
+                box-sizing:border-box;
+                li{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    box-sizing:border-box;
+                    border-top:1px solid #ddd;
+                    border-bottom:1px solid #ddd;
+                    float:left;
+                    width:150px;
+                    height:120px;
+                    text-align:center;
+                    font:12px/50px "";
+                    margin-bottom:5px;
+                    &:first-child{
+                        width:598px;
+                        text-align:left;
+                        justify-content:left;
+                        padding-left:32px;
+                        border-left:1px solid #ddd;
+                    }
+                    &:last-child{
+                        border-right:1px solid #ddd;
+                    }
+                    input#num{
+                        width:60px;
+                    }
+                    img{
+                        width:80px;
+                        height:80px;
+                        border:1px solid #eee;
+                        margin:0 10px;
+                    }
+                }
+            }
+        }
+        .jiesuan{
+            float:left;
+            width:1200px;
+            height:50px;
+            background:#e5e5e5;
+            margin-top:20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            ul{
+                li{
+                    float:left;
+                    width:600px;
+                    box-sizing:border-box;
+                    padding-left:32px;
+                    &:last-child{
+                        box-sizing:border-box;
+                        padding-left:200px;
+                    }
+                    span{
+                        font:12px/50px "";
+                        color:#333;
+                        margin-right:10px;
+                        i{
+                            font:18px/50px "";
+                            color:#e31939;
+                        }
+                        b{
+                            font:22px/50px "";
+                            color:#e31939;
+                        }
+                    }
+                    a{
+                        float:right;
+                        display:block;
+                        width:120px;
+                        height:50px;
+                        background:#f40;
+                        font:20px/50px "";
+                        color:#fff;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}

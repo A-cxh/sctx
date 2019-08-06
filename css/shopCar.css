@@ -1,0 +1,160 @@
+body {
+  background: #fff; }
+
+#foot {
+  background: #34495e; }
+  #foot .footer-top {
+    padding: 20px 0 0 0; }
+    #foot .footer-top a {
+      color: #ddd; }
+  #foot .footer-center p {
+    color: #ddd; }
+  #foot .footer-bottom ul {
+    margin: 10px auto 0;
+    padding: 0 0 20px 0; }
+
+#title {
+  width: 1200px;
+  height: 100px;
+  margin: 10px auto;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #b3a078;
+  position: relative; }
+  #title img {
+    float: left;
+    margin-top: 29px; }
+  #title p {
+    float: left;
+    width: 250px;
+    height: 44px;
+    border-left: 1px solid #ddd;
+    font: 600 32px/44px "";
+    color: #ee4343;
+    text-align: center;
+    margin: 25px 0 0 20px; }
+  #title .guanzhu {
+    float: right; }
+    #title .guanzhu .ewm {
+      width: 60px;
+      height: 60px;
+      background: url(../images/ewm.png) no-repeat center;
+      position: absolute;
+      top: -10px;
+      right: 0; }
+      #title .guanzhu .ewm b {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: rgba(161, 161, 161, 0.1);
+        position: absolute;
+        left: 25px;
+        top: -5px; }
+    #title .guanzhu a {
+      position: absolute;
+      right: 0;
+      bottom: 30px; }
+
+#shops {
+  min-height: 309px;
+  display: flex;
+  align-items: center; }
+  #shops p {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #shops p i {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background: url(../images/shops-shopCar.png) no-repeat center;
+      background-size: 100px 100px;
+      margin-right: 20px; }
+    #shops p span {
+      width: 300px;
+      font: 14px/30px ""; }
+    #shops p a {
+      color: #1366b9; }
+      #shops p a:hover {
+        color: red; }
+  #shops .car dt ul {
+    height: 50px;
+    box-sizing: border-box;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding-left: 150px; }
+    #shops .car dt ul li {
+      float: left;
+      width: 150px;
+      text-align: center;
+      font: 12px/50px ""; }
+      #shops .car dt ul li:first-child {
+        width: 450px;
+        text-align: left; }
+  #shops .car dd ul {
+    box-sizing: border-box; }
+    #shops .car dd ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      float: left;
+      width: 150px;
+      height: 120px;
+      text-align: center;
+      font: 12px/50px "";
+      margin-bottom: 5px; }
+      #shops .car dd ul li:first-child {
+        width: 598px;
+        text-align: left;
+        justify-content: left;
+        padding-left: 32px;
+        border-left: 1px solid #ddd; }
+      #shops .car dd ul li:last-child {
+        border-right: 1px solid #ddd; }
+      #shops .car dd ul li input#num {
+        width: 60px; }
+      #shops .car dd ul li img {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #eee;
+        margin: 0 10px; }
+  #shops .car .jiesuan {
+    float: left;
+    width: 1200px;
+    height: 50px;
+    background: #e5e5e5;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #shops .car .jiesuan ul li {
+      float: left;
+      width: 600px;
+      box-sizing: border-box;
+      padding-left: 32px; }
+      #shops .car .jiesuan ul li:last-child {
+        box-sizing: border-box;
+        padding-left: 200px; }
+      #shops .car .jiesuan ul li span {
+        font: 12px/50px "";
+        color: #333;
+        margin-right: 10px; }
+        #shops .car .jiesuan ul li span i {
+          font: 18px/50px "";
+          color: #e31939; }
+        #shops .car .jiesuan ul li span b {
+          font: 22px/50px "";
+          color: #e31939; }
+      #shops .car .jiesuan ul li a {
+        float: right;
+        display: block;
+        width: 120px;
+        height: 50px;
+        background: #f40;
+        font: 20px/50px "";
+        color: #fff;
+        text-align: center; }
