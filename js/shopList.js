@@ -6,9 +6,15 @@
         this.box4 = $("header").find(".header-r").find(".t-num");
         this.oCar = $("#main").find(".shops").find("ul");
         this.url = "http://localhost/GulpTest/sctx/data/data.json";
+        this.left = $("#btnL");
+        this.right = $("#btnR");
+        this.pageCont = $("#page");
+        this.index = 0;
+        this.num = 12;
 
         this.load();
 
+        this.addEvent();
         this.addEventInf();
         this.addCar();
     }
@@ -25,7 +31,8 @@
             success:function(res){
                 that.res = JSON.parse(res);
                 // console.log(that.res);
-                that.display();
+                that.displayList();
+                that.displayPage();
             },
             error:function(res){
                 console.log(res);
@@ -33,7 +40,7 @@
         })
     }
 
-    display(){
+    displayList(){
         var str1 = "";
         for(var i = 4; i < 8; i++){
             str1 += `<dd>
@@ -60,20 +67,101 @@
         this.box2.html(str2);
         
         var str3 = "";
-        for(var i = 0; i < 12; i++){
-            str3 += `<li>
-                        <a href="shopDetails.html" target="_blank">
-                            <div class="imgBox">
-                            <img src="${this.res[i].url}" title="${this.res[i].name}" id = "${this.res[i].goodsid}"/>
-                            </div>
-                            <p title="${this.res[i].name}">${this.res[i].name}</p>
-                            <span>${this.res[i].price}<i>包邮</i></span>
-                        </a>
-                        <b></b>
-                    </li>`;
+        for(var i = this.index*this.num; i < (this.index+1)*this.num; i++){
+            if(i < this.res.length){
+                str3 += `<li>
+                            <a href="shopDetails.html" target="_blank">
+                                <div class="imgBox">
+                                <img src="${this.res[i].url}" title="${this.res[i].name}" id = "${this.res[i].goodsid}"/>
+                                </div>
+                                <p title="${this.res[i].name}">${this.res[i].name}</p>
+                                <span>${this.res[i].price}<i>包邮</i></span>
+                            </a>
+                            <b></b>
+                        </li>`;
+            }
         }
         this.box3.html(str3);
+    }
 
+    displayPage(){
+        var str4 = "";
+        console.log(this.res)
+        this.ps = Math.ceil(this.res.length / this.num);
+        for(var i = 0; i < this.ps; i++){
+            str4 += `<li>${i+1}</li>`;
+        }
+        this.pageCont.html(str4);
+
+        this.setActive();
+    }
+
+    setActive(){
+        for(var i = 0; i < this.ps; i++){
+            this.pageCont.children().attr("class", "");
+        }
+        this.pageCont.children().eq(this.index).attr("class", "active");
+    }
+
+    addEvent(){
+        var that = this;
+        this.left.on("click", function(){
+            that.changeIndex("l");
+        })
+        this.right.on("click", function(){
+            that.changeIndex("r");
+        })
+        $(document).on("click", "li", function(){
+            that.index = $(this).index();
+            that.setActive();
+            that.displayList();
+            that.changeBtn();
+        })
+    }
+
+    changeIndex(lr){
+        if(lr == "l"){
+            if(this.index == 0){
+                this.index = 0;
+            }else{
+                this.index--;
+            }
+        }
+        if(lr == "r"){
+            if(this.index == this.ps-1){
+                this.index = this.ps-1;
+            }else{
+                this.index++;
+            }
+        }
+        this.setActive();
+        this.displayList();
+        this.changeBtn();
+    }
+
+    changeBtn(){
+        if(this.index == 0){
+            this.left.css({
+                border:"1px solid rgb(158, 160, 163)",
+                color:"rgb(158, 160, 163)"
+            })
+        }else{
+            this.left.css({
+                border:"1px solid rgb(70, 150, 255)",
+                color:"rgb(0, 174, 255)"
+            })
+        }
+        if(this.index == this.ps-1){
+            this.right.css({
+                border:"1px solid rgb(158, 160, 163)",
+                color:"rgb(158, 160, 163)"
+            })
+        }else{
+            this.right.css({
+                border:"1px solid rgb(70, 150, 255)",
+                color:"rgb(0, 174, 255)"
+            })
+        }
     }
 
     addEventInf(){
@@ -95,7 +183,6 @@
             str4 += parseInt(goodsVal.num);
         })
         that.box4.html(str4);
-
     }
 
     addCar(){

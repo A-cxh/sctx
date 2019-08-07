@@ -9,6 +9,7 @@
 
         this.load();
         this.addRemove();
+        this.status = 0;
     }
 
     load(){
@@ -62,7 +63,7 @@
                         str += `<dd myindex = "${resVal.goodsid}">
                                     <ul>
                                         <li>
-                                            <input type="checkbox" name="" id="">
+                                            <input type="checkbox" name="" id="check">
                                             <img src="${resVal.url}" >
                                             <span>${resVal.name}</span>
                                         </li>
@@ -72,15 +73,26 @@
                                         <li class = "del">删除</li>
                                     </ul>
                                 </dd>`;
-    
-                        str1 += parseInt(goodsVal.num);
-                        str2 += parseInt(resVal.price.slice(1,resVal.price.length-1))*goodsVal.num;
                     }
                 })
             })
+            var that = this;
+            $(document).on("click", "#check", function(){
+                var mynum = $(this).parent().nextAll().children("#num").val();
+                var myprice = $(this).parent().nextAll().html();
+                myprice = myprice.slice(1, myprice.length-1)
+                if($(this).is(":checked")) that.status = 1;
+                if(!$(this).is(":checked")) that.status = 0;
+                // console.log(that.status);
+                if(that.status == 1){
+                    str1 += parseInt(mynum);
+                    str2 += parseInt(mynum)*parseInt(myprice);
+                }
+                console.log(str1);
+                that.box1.html(str1);
+                that.box2.html(str2);       
+            })
             this.dd.html(str);
-            this.box1.html(str1);
-            this.box2.html(str2);
             this.box3.html(str1);
         }
     }

@@ -3,11 +3,12 @@ require.config({
     paths:{
         floor:"floor",
         Mag:"Magnifier",
-        tab:"table"
+        tab:"table",
+        ms:"mstime"
     }
 })
 
-require(["floor", "Mag", "tab"], function(f,m,t){
+require(["floor", "Mag", "tab", "ms"], function(f,m,t,ms){
     new f({
         list:$(".floorList"),
         zero:$(".F0"),
@@ -27,5 +28,15 @@ require(["floor", "Mag", "tab"], function(f,m,t){
         span:$("#content").find(".simg").find("span"),
         bbox:$("#content").find(".bbox"),
         bimg:$("#content").find(".bbox").children(".bimg")
+    })
+
+    new ms({
+        obox:$(".todayMs").find(".tm-l-tit").find("b"),
+        year:2019,
+        month:8,
+        day:9,
+        hour:0,
+        minute:0,
+        second:0
     })
 })

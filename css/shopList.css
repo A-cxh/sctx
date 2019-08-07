@@ -219,29 +219,41 @@ body {
           position: absolute;
           bottom: 10px;
           right: 10px; }
-  #main .pagination {
+  #main .pagWarp {
     font-size: 16px;
     position: absolute;
     left: 50%;
-    bottom: 50px; }
-    #main .pagination a {
-      text-decoration: none;
-      border: 1px solid #AAE;
-      color: #18a3ff;
-      display: inline-block;
-      padding: 0.1em 0.4em;
-      margin-right: 5px;
-      margin-bottom: 5px; }
-    #main .pagination span {
-      display: inline-block;
-      padding: 0.1em 0.4em;
-      margin-right: 5px;
-      margin-bottom: 5px; }
-    #main .pagination .current {
-      background: #18a3ff;
-      color: #fff;
-      border: 1px solid #AAE; }
-    #main .pagination .current.prev, #main .pagination .current.next {
-      color: #999;
-      border-color: #999;
-      background: #fff; }
+    bottom: 50px;
+    text-align: center; }
+    #main .pagWarp #btnL {
+      width: 60px;
+      height: 22px;
+      border: 1px solid #9ea0a3;
+      color: #9ea0a3;
+      float: left;
+      margin: 0 1px; }
+      #main .pagWarp #btnL:hover {
+        cursor: pointer; }
+    #main .pagWarp #page {
+      float: left; }
+      #main .pagWarp #page li {
+        float: left;
+        border: 1px solid #4696ff;
+        color: #00aeff;
+        width: 22px;
+        height: 22px;
+        margin: 0 3px; }
+        #main .pagWarp #page li.active {
+          color: #fff;
+          background: #00aeff; }
+        #main .pagWarp #page li:hover {
+          cursor: pointer; }
+    #main .pagWarp #btnR {
+      width: 60px;
+      height: 22px;
+      border: 1px solid #4696ff;
+      color: #00aeff;
+      float: left;
+      margin: 0 1px; }
+      #main .pagWarp #btnR:hover {
+        cursor: pointer; }
