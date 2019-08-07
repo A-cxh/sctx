@@ -27,9 +27,9 @@
                 </p>
             </div>
             <div class="header-r">
-                <a href="index.html">收藏天下首页</a>
+                <a href="shopList.html">商品列表</a>
                 <span>|</span>
-                <a href="shopCar.html">购物车<b>0</b>件</a>
+                <a href="shopCar.html">购物车<b class = "t-num">0</b>件</a>
                 <span>|</span>
                 <a href="#" class="mysc">我的收藏天下<i></i></a>
                 <div class="sc">
@@ -76,6 +76,7 @@
         <div class="margin">
             <a href="index.html"><img src="../images/reg&log-logo.png" /></a>
             <p>我的购物车</p>
+            
             <div class="guanzhu">
                 <div class="ewm"><b></b></div>
                 <a href="#"><img src="../images/499-free.png" /></a>
@@ -85,25 +86,25 @@
     >
     <div id = "shops">
         <div class = "margin">
-            <!-- <p>
-                <i></i>
-                <span>
-                    购物车还是空空的呢，快去看看心怡的商品吧~
-                    <a href="shopList.html">去购物></a>
-                </span>
-            </p> -->
             <div class = "car">
+                <dt>
+                    <ul>
+                        <li>商品信息</li>
+                        <li>单价（元）</li>
+                        <li>数量</li>
+                        <li>金额（元）</li>
+                        <li>操作</li>
+                    </ul>
+                </dt>
                 <dl>
-                    <dt>
-                        <ul>
-                            <li>商品信息</li>
-                            <li>单价（元）</li>
-                            <li>数量</li>
-                            <li>金额（元）</li>
-                            <li>操作</li>
-                        </ul>
-                    </dt>
-                    <dd>
+                    <p class = "null">
+                        <i></i>
+                        <span>
+                            购物车还是空空的呢，快去看看心怡的商品吧~
+                            <a href="shopList.html">去购物></a>
+                        </span>
+                    </p>
+                    <!-- <dd>
                         <ul>
                             <li>
                                 <input type="checkbox" name="" id="">
@@ -115,7 +116,7 @@
                             <li>65</li>
                             <li>删除</li>
                         </ul>
-                    </dd>
+                    </dd> -->
                 </dl>
                 <div class = "jiesuan">
                     <ul>
@@ -124,8 +125,8 @@
                             <span>全选</span>
                         </li>
                         <li>
-                            <span>已选商品<i>n</i>件</span>
-                            <span>合计（不含运费）：<b>5222</b></span>
+                            <span>已选商品<i>0</i>件</span>
+                            <span>合计（不含运费）：<b>0</b></span>
                             <a href="##">结算</a>
                         </li>
                     </ul>
@@ -138,6 +139,9 @@
 
 </body>
 <script src="../libs/jquery.1.12.4.js"></script>
+<script src="../libs/cookies.js"></script>
+<script src="../libs/ajax3.0.js"></script>
 <script src="../js/importH&F.js"></script>
 <script src="../js/login&out.js"></script>
+<script src="../js/shopCar.js"></script>
 </html>

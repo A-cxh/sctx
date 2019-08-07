@@ -62,7 +62,8 @@ body {
     height: 100px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 50px 0; }
     #shops p i {
       display: inline-block;
       width: 100px;
@@ -114,7 +115,8 @@ body {
         padding-left: 32px;
         border-left: 1px solid #ddd; }
       #shops .car dd ul li:last-child {
-        border-right: 1px solid #ddd; }
+        border-right: 1px solid #ddd;
+        cursor: pointer; }
       #shops .car dd ul li input#num {
         width: 60px; }
       #shops .car dd ul li img {
@@ -138,14 +140,15 @@ body {
       padding-left: 32px; }
       #shops .car .jiesuan ul li:last-child {
         box-sizing: border-box;
-        padding-left: 200px; }
+        padding-left: 150px; }
       #shops .car .jiesuan ul li span {
         font: 12px/50px "";
         color: #333;
         margin-right: 10px; }
         #shops .car .jiesuan ul li span i {
           font: 18px/50px "";
-          color: #e31939; }
+          color: #e31939;
+          margin: 0 5px; }
         #shops .car .jiesuan ul li span b {
           font: 22px/50px "";
           color: #e31939; }

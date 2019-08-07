@@ -14,6 +14,7 @@
         this.box12 = $(".banner9").find(".rx2").find("dl");
         this.box13 = $(".banner9").find(".rx3").find("dl");
         this.box14 = $(".youBi").find(".yb-b-c").find("ul");
+        this.box15 = $("header").find(".header-r").find(".t-num");
 
         this.url = "http://localhost/GulpTest/sctx/data/data.json";
 
@@ -38,6 +39,13 @@
                 console.log(res);
             }
         })
+        this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+        var str15 = 0;
+        this.goods.forEach((goodsVal)=>{
+            str15 += parseInt(goodsVal.num);
+            
+        })
+        this.box15.html(str15);
     }
 
     display(){

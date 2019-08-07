@@ -67,6 +67,19 @@ body{
             box-sizing:border-box;
             padding-top:80px;
             position:relative;
+            .table{
+                .mb{
+                    width:220px;
+                    height:220px;
+                    border-radius:50%;
+                    background:rgba(94, 94, 94, 0.4);
+                    position:absolute;
+                    font:32px/220px "";
+                    color:#fff;
+                    left:130px;
+                    top:130px;
+                }
+            }
             span{
                 width:320px;
                 height:320px;

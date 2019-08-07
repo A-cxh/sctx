@@ -168,7 +168,8 @@ body {
         background: #fff;
         margin: 0 0 20px 17px;
         box-sizing: border-box;
-        padding: 5px; }
+        padding: 5px;
+        position: relative; }
         #main .shops ul li .imgBox {
           width: 220px;
           height: 220px;
@@ -178,6 +179,14 @@ body {
           #main .shops ul li .imgBox img {
             width: 220px;
             height: 220px; }
+          #main .shops ul li .imgBox .mb {
+            width: 125px;
+            height: 110px;
+            border-radius: 50%;
+            background: rgba(94, 94, 94, 0.5);
+            position: absolute;
+            font: 32px/100px "";
+            color: #fff; }
         #main .shops ul li p {
           font: 12px/20px "";
           color: #666;
@@ -207,7 +216,9 @@ body {
           border-radius: 50%;
           background: url(../images/shopCar.png) no-repeat center, red;
           background-size: 20px 20px;
-          margin: 0 10px 0 0; }
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
   #main .pagination {
     font-size: 16px;
     position: absolute;
