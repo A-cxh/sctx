@@ -14,8 +14,8 @@
 
         this.load();
 
-        this.addEvent();
         this.addEventInf();
+        this.addEvent();
         this.addCar();
     }
 
@@ -77,7 +77,8 @@
                                 <p title="${this.res[i].name}">${this.res[i].name}</p>
                                 <span>${this.res[i].price}<i>包邮</i></span>
                             </a>
-                            <b></b>
+                            <b><p class = "add">添加成功</p></b>
+                            
                         </li>`;
             }
         }
@@ -89,7 +90,7 @@
         console.log(this.res)
         this.ps = Math.ceil(this.res.length / this.num);
         for(var i = 0; i < this.ps; i++){
-            str4 += `<li>${i+1}</li>`;
+            str4 += `<li id = "mypages">${i+1}</li>`;
         }
         this.pageCont.html(str4);
 
@@ -111,7 +112,7 @@
         this.right.on("click", function(){
             that.changeIndex("r");
         })
-        $(document).on("click", "li", function(){
+        this.pageCont.on("click", "#mypages", function(){
             that.index = $(this).index();
             that.setActive();
             that.displayList();
@@ -191,42 +192,53 @@
             // console.log($(this).prev("a").find("img")[0].id);
             var data = $("header").find(".p2").attr("status");
             if (data == "in") {
-                for (var i = 0; i < that.res.length; i++) {
-                    if ($(this).prev("a").find("img")[0].id == that.res[i].goodsid) {
-                        console.log(that.res[i].num);
-                        that.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
-                        if (that.goods.length == 0) {
-                            that.goods.push({
-                                id: that.res[i].goodsid,
-                                num: 1
-                            })
-                            that.res[i].num--;
-                        } else {
-                            var j;
-                            var onoff = that.goods.some((val, index) => {
-                                j = index;
-                                return val.id == that.res[i].goodsid;
-                            })
-                            if (onoff) {
-                                that.goods[j].num++;
-                                that.res[i].num--;
-                            } else {
+                $(this).find(".add").css({
+                    display:"block"
+                })
+                setTimeout(()=>{
+                    $(this).find(".add").css({
+                        display:"none"
+                    })
+                },500)
+
+                for (var i = that.index*that.num; i < (that.index+1)*that.num; i++) {
+                    if(i < that.res.length){
+                        if ($(this).prev("a").find("img")[0].id == that.res[i].goodsid) {
+                            console.log(that.res[i].num);
+                            that.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
+                            if (that.goods.length == 0) {
                                 that.goods.push({
                                     id: that.res[i].goodsid,
                                     num: 1
                                 })
                                 that.res[i].num--;
+                            } else {
+                                var j;
+                                var onoff = that.goods.some((val, index) => {
+                                    j = index;
+                                    return val.id == that.res[i].goodsid;
+                                })
+                                if (onoff) {
+                                    that.goods[j].num++;
+                                    that.res[i].num--;
+                                } else {
+                                    that.goods.push({
+                                        id: that.res[i].goodsid,
+                                        num: 1
+                                    })
+                                    that.res[i].num--;
+                                }
                             }
-                        }
-                        if (that.res[i].num == 0) {
-                            that.oCar.off("click.abc", this);
-                            var mb = $("<p class = 'mb'>售罄</p>");
-                            $(this).prev("a").find("img").after(mb);
-                        }
-                        console.log(that.res[i].num)
-                        console.log(that.goods)
-                        setCookie("goods", JSON.stringify(that.goods));
 
+                            if (that.res[i].num == 0) {
+                                $(this).off("click.abc");
+                                var mb = $("<p class = 'mb'>售罄</p>");
+                                $(this).prev("a").find("img").after(mb);
+                            }
+                            console.log(that.res[i].num)
+                            console.log(that.goods)
+                            setCookie("goods", JSON.stringify(that.goods));
+                        }
                     }
                 }
             } else {

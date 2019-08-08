@@ -43,6 +43,9 @@
         var str = "";
         var str1 = 0;
         var str2 = 0;
+        var str3 = 0;
+        var allstr1 = 0;
+        var allstr2 = 0;
         if(this.goods.length == 0){
             if(this.goods.length == 0){
                 var str3 = "";
@@ -73,14 +76,70 @@
                                         <li class = "del">删除</li>
                                     </ul>
                                 </dd>`;
+                        str3 += parseInt(goodsVal.num);
+
+                        allstr1 += parseInt(goodsVal.num);
+                        allstr2 += parseInt(resVal.price.slice(1,resVal.price.length-1))*goodsVal.num;
                     }
                 })
             })
             var that = this;
-            $(document).on("click", "#check", function(){
+            // 改数量
+            $(document).on("mousedown", "#num", function(){
+                var prenum = $(this).val();
+                var preprice = $(this).parent().prev("li").html();
+                var preAddprice = preprice.slice(1, preprice.length-1) * prenum;
+                $(document).on("mouseup", "#num", function(){
+                    var check = $("#allCheck").prop("checked");
+                    $("#shops").find("dl").find("dd").find("#check").prop("checked", check);
+                    // var check1 = $("#check").prop("checked");
+                    // $("#shops").find("dl").find("dd").find("#check").prop("checked", check1);
+
+                    var mynum = $(this).val();
+                    var myprice = $(this).parent().prev("li").html();
+                    var myAddprice = myprice.slice(1, myprice.length-1) * mynum;
+                    if($("#shops").find("dl").find("dd").find("#check").is(":checked")) that.status = 1;
+                    if(!$("#shops").find("dl").find("dd").find("#check").is(":checked")) that.status = 0;
+                    // console.log(myAddprice);
+    
+                    if(that.status == 1){
+                        str1 = allstr1 + parseInt(mynum) - parseInt(prenum);
+                        str2 = allstr2 + parseInt(myAddprice) - parseInt(preAddprice);
+                    }
+                    if(that.status == 0){
+                        str1 = 0;
+                        str2 = 0;
+                    }
+                    that.box1.html(str1);
+                    that.box2.html(str2);  
+                })
+            });
+            // 全选
+            $(".jiesuan").on("change", "#allCheck", function(){
+                // console.log($(this).is(":checked"));
+                var check = $(this).prop("checked");
+                $("#shops").find("dl").find("dd").find("#check").prop("checked", check);
+                if($(this).is(":checked")) that.status = 1;
+                if(!$(this).is(":checked")) that.status = 0;
+                // console.log(that.status);
+                if(that.status == 1){
+                    str1 = allstr1;
+                    str2 = allstr2;
+                }
+                if(that.status == 0){
+                    str1 = 0;
+                    str2 = 0;
+                }
+                // console.log(str1);
+                that.box1.html(str1);
+                that.box2.html(str2);  
+            });
+            // 选单个
+            $(document).on("change", "#check", function(){
+                $(this).prop("checked");
                 var mynum = $(this).parent().nextAll().children("#num").val();
                 var myprice = $(this).parent().nextAll().html();
-                myprice = myprice.slice(1, myprice.length-1)
+                myprice = myprice.slice(1, myprice.length-1);
                 if($(this).is(":checked")) that.status = 1;
                 if(!$(this).is(":checked")) that.status = 0;
                 // console.log(that.status);
@@ -88,12 +147,17 @@
                     str1 += parseInt(mynum);
                     str2 += parseInt(mynum)*parseInt(myprice);
                 }
-                console.log(str1);
+                if(that.status == 0){
+                    str1 -= parseInt(mynum);
+                    str2 -= parseInt(mynum)*parseInt(myprice);
+                }
+                // console.log(str1);
                 that.box1.html(str1);
                 that.box2.html(str2);       
             })
+
             this.dd.html(str);
-            this.box3.html(str1);
+            this.box3.html(str3);
         }
     }
 
