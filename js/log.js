@@ -9,7 +9,13 @@
         this.t = 3;
 
         this.addEvent();
+        // this.adduser();
     }
+
+    // adduser(){
+    //     console.log(localStorage.getItem("LoginUser"))
+    //     console.log(getCookie("goods"))
+    // }
 
     addEvent(){
         var that = this;

@@ -14,6 +14,9 @@ class GetInf{
 
     addCar(){
         var that = this;
+        var userGoods = [];
+        userGoods.unshift(JSON.parse(localStorage.getItem("LoginUser")));
+
         this.oCar.on("click.abc", function(){
             // console.log($(this).parent(".details").prev(".imgBox").find(".table").find("img")[0].id)
             var data = $("header").find(".p2").attr("status");
@@ -47,7 +50,7 @@ class GetInf{
                 that.box5.html(str3);
 
 
-                console.log(that.goods);
+                // console.log(that.goods);
                 setCookie("goods", JSON.stringify(that.goods));
 
                 if (that.inf.num == 0) {
@@ -55,6 +58,14 @@ class GetInf{
                     var mb = $("<p class = 'mb'>售罄</p>");
                     $(this).parent(".details").prev(".imgBox").find(".table").find("img").after(mb);
                 }
+                // if(userGoods.length == 0){
+                    userGoods.push(JSON.parse(JSON.stringify(that.goods)));
+                    console.log([userGoods[0],userGoods[userGoods.length-1]]);
+                    setCookie("userGoods", JSON.stringify([userGoods[0],userGoods[userGoods.length-1]]));
+                // }else{
+                    // userGoods[userGoods.length-1].push(JSON.parse(JSON.stringify(that.goods)));
+
+                // }
             } else {
                 alert("请先登录！");
                 location.href = "../html/log.html";
@@ -64,12 +75,7 @@ class GetInf{
     
     getTnf(){
         this.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
-        var str4 = 0;
-        this.goods.forEach((goodsVal)=>{
-            str4 += parseInt(goodsVal.num);
-            
-        })
-        this.box6.html(str4);
+        
         // console.log(localStorage.getItem("shopInf"));
         this.inf = JSON.parse(localStorage.getItem("shopInf"));
         // console.log(this.inf);
@@ -91,6 +97,13 @@ class GetInf{
         var str3 = "";
         str3 +=  `${this.inf.num}`;
         this.box5.html(str3);
+
+        var str4 = 0;
+        this.goods.forEach((goodsVal)=>{
+            str4 += parseInt(goodsVal.num);
+            
+        })
+        this.box6.html(str4);
     }
 }
 

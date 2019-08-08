@@ -10,6 +10,7 @@
         this.load();
         this.addRemove();
         this.status = 0;
+        // this.adduser();
     }
 
     load(){
@@ -83,6 +84,43 @@
                     }
                 })
             })
+
+            // $("#shops").find("dl").find("dd").find("input[type='checkbox']").click(function () {
+            //     /*初始化选择为TURE*/
+            //     $("#allCheck")[0].checked = true;
+            //     /*获取未选中的*/
+            //     var nocheckedList = new Array();
+            //     $("#shops").find("dl").find("dd").find("#check").not(":checked").each(function () {
+            //         nocheckedList.push($(this).val());
+            //     });
+
+            //     /*状态显示*/
+            //     if (nocheckedList.length == $("#shops").find("dl").find("dd").find("#check").length) {
+            //         $("#allCheck")[0].checked = false;
+            //     } else if (nocheckedList.length == 0) {
+            //         $("#allCheck")[0].checked = true;
+            //     } else if (nocheckedList.length) {
+            //         $("#allCheck")[0].checked = false;
+            //     }
+            // });
+            // // 全选/取消
+            // $("#allCheck").click(function () {
+            //     // alert(this.checked);
+            //     console.log($("#shops").find("dl").find("dd").find("#check"))
+            //     if ($(this).is(":checked")) {
+            //         $("#shops").find("dl").find("dd").find("#check").each(function () {
+            //             $(this).prop("checked", true);
+            //         });
+
+            //     } else {
+            //         $("#shops").find("dl").find("dd").find("#check").each(function () {
+            //             $(this).removeAttr("checked", false);
+            //             // 根据官方的建议：具有 true 和 false 两个属性的属性，
+            //             // 如 checked, selected 或者 disabled 使用prop()，其他的使用 attr()
+            //             $(this).prop("checked", false);
+            //         });
+            //     }
+            // });
             var that = this;
             // 改数量
             $(document).on("mousedown", "#num", function(){
@@ -157,6 +195,7 @@
             })
 
             this.dd.html(str);
+            
             this.box3.html(str3);
         }
     }
@@ -170,6 +209,17 @@
             that.changeCookie(function(i){
                 that.goods.splice(i,1);
             });
+            // console.log(that.index);
+            // console.log(JSON.parse(getCookie("userGoods"))[1]);
+
+            var userGoods = JSON.parse(getCookie("userGoods"))[1];
+            for(var i = 0; i < userGoods.length; i++){
+                if(userGoods[i].id == that.index){
+                    userGoods.splice(i,1);
+                }
+            }
+            // console.log([JSON.parse(localStorage.getItem("LoginUser")) ,userGoods]);
+            setCookie("userGoods", JSON.stringify([JSON.parse(localStorage.getItem("LoginUser")) ,userGoods]));
         })
         
         $(document).on("input", "#num", function(){
@@ -192,6 +242,10 @@
         setCookie("goods", JSON.stringify(this.goods));
         this.display()
     }
+
+    // adduser(){
+    //     console.log(getCookie("goods"))
+    // }
 }
 
 new Car();

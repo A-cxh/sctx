@@ -83,11 +83,17 @@
             }
         }
         this.box3.html(str3);
+
+        var str4 = 0;
+        this.goods.forEach((goodsVal)=>{
+            str4 += parseInt(goodsVal.num);
+        })
+        this.box4.html(str4);
     }
 
     displayPage(){
         var str4 = "";
-        console.log(this.res)
+        // console.log(this.res)
         this.ps = Math.ceil(this.res.length / this.num);
         for(var i = 0; i < this.ps; i++){
             str4 += `<li id = "mypages">${i+1}</li>`;
@@ -169,7 +175,7 @@
         var that = this;
         $(document).on("click", "img", function(){
             // console.log(this)
-            console.log(this.id);
+            // console.log(this.id);
             for(var i = 0; i < that.res.length; i++){
                 if(this.id == that.res[i].goodsid){
                     console.log(that.res[i]);
@@ -179,15 +185,14 @@
             return that.res[i];
         })
         that.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
-        var str4 = 0;
-        that.goods.forEach((goodsVal)=>{
-            str4 += parseInt(goodsVal.num);
-        })
-        that.box4.html(str4);
+        
     }
 
     addCar(){
         var that = this;
+        var userGoods = [];
+        userGoods.unshift(JSON.parse(localStorage.getItem("LoginUser")));
+
         this.oCar.on("click.abc", "b", function () {
             // console.log($(this).prev("a").find("img")[0].id);
             var data = $("header").find(".p2").attr("status");
@@ -204,7 +209,7 @@
                 for (var i = that.index*that.num; i < (that.index+1)*that.num; i++) {
                     if(i < that.res.length){
                         if ($(this).prev("a").find("img")[0].id == that.res[i].goodsid) {
-                            console.log(that.res[i].num);
+                            // console.log(that.res[i].num);
                             that.goods = getCookie("goods") ? JSON.parse(getCookie("goods")) : [];
                             if (that.goods.length == 0) {
                                 that.goods.push({
@@ -229,18 +234,19 @@
                                     that.res[i].num--;
                                 }
                             }
-
                             if (that.res[i].num == 0) {
                                 $(this).off("click.abc");
                                 var mb = $("<p class = 'mb'>售罄</p>");
                                 $(this).prev("a").find("img").after(mb);
                             }
-                            console.log(that.res[i].num)
-                            console.log(that.goods)
+                            // console.log(that.goods);
                             setCookie("goods", JSON.stringify(that.goods));
                         }
                     }
                 }
+                userGoods.push(JSON.parse(JSON.stringify(that.goods)));
+                // console.log([userGoods[0],userGoods[userGoods.length-1]]);
+                setCookie("userGoods", JSON.stringify([userGoods[0],userGoods[userGoods.length-1]]));
             } else {
                 alert("请先登录！");
                 location.href = "../html/log.html";

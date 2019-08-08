@@ -32,7 +32,7 @@
             },
             success:function(res){
                 that.res = JSON.parse(res);
-                console.log(that.res);
+                // console.log(that.res);
                 that.display();
             },
             error:function(res){

@@ -60,7 +60,7 @@
 
     checkForm(){
         this.form.validate();
-        $("input").on("change", function(){
+        $("input").on("blur", function(){
             if($("input").is(".valid")){
                 $(this).nextAll("div").css({
                     // width:150,
@@ -134,7 +134,6 @@
                     this.cont.show();
                     setTimeout(() => {
                         this.cont.hide();
-                        location.href = "reg.html";
                     }, 2000)
                 } 
             }

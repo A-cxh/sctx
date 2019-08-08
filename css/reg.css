@@ -117,6 +117,13 @@ tbody #name,
     float: right;
     color: #333;
 }
+#log{
+    font: 16px/2 "";
+    float: right;
+    color: #333;
+    float:right;
+    margin-left:50px;
+}
 
 .t {
     color: red;

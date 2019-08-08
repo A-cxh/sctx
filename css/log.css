@@ -70,8 +70,26 @@ tbody td {
     padding: 5px 10px;
     font: 700 16px/2 "";
     box-sizing: border-box;
+    position:relative;
 }
-
+tbody td .user{
+    display:block;
+    width:25px;
+    height:25px;
+    background:url(../images/user.png) no-repeat center;
+    position:absolute;
+    right:15px;
+    top:10px;
+}
+tbody td .pass{
+    display:block;
+    width:25px;
+    height:25px;
+    background:url(../images/pass.png) no-repeat center;
+    position:absolute;
+    right:14px;
+    top:10px;
+}
 tbody #name,
 #pass {
     width: 150px;
