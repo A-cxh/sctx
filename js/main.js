@@ -32,9 +32,9 @@ require(["floor", "Mag", "tab", "ms"], function(f,m,t,ms){
 
     new ms({
         obox:$(".todayMs").find(".tm-l-tit").find("b"),
-        year:2019,
+        year:2029,
         month:8,
-        day:9,
+        day:30,
         hour:0,
         minute:0,
         second:0
